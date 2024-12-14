@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Jogos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            background-color: #591c59;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-bar {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .search-bar input {
+            padding: 14px;
+            width: 75%;
+            max-width: 400px;
+            border-radius: 25px;
+            border: 2px solid #ccc;
+            font-size: 1.2rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s;
+        }
+
+        .search-bar input:focus {
+            border-color: #3f153f;
+        }
+
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px 30px;
+            gap: 30px;
+        }
+
+        .game-item {
+            background-color: #ffffff;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 280px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .game-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .game-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 4px solid #391639;
+        }
+
+        .game-item h3 {
+            font-size: 1.7rem;
+            margin: 20px;
+            color: #333;
+        }
+
+        .game-item p {
+            padding: 0 20px 20px;
+            text-align: justify;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin: 10px 20px 20px;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #33173f;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #6c3483;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #3a1a3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1><i class="fas fa-gamepad"></i> Catálogo de Jogos SubGames</h1>
+
+<div class="search-bar">
+    <input type="text" id="search" placeholder="Pesquisar Jogos..." onkeyup="searchGames()">
+</div>
+<a href="ajuda.html" class="download-btn" download>Ajuda</a>   <a href="Menu.html" class="download-btn" download>Voltar ao Menu</a>
+<div class="game-list" id="game-list">
+   
+    <div class="game-item" data-title="Lethal Company">
+        <img src="img/Lethal-Company-1-e1699976954933.webp" alt="Lethal Company">
+        <h3>Lethal Company</h3>
+        <p>Lethal Company é um jogo de terror e mistério no qual os jogadores assumem o papel de um trabalhador que deve investigar e explorar um prédio abandonado, cheio de fenômenos sobrenaturais e entidades assustadoras.<br><br>
+            <strong>Peso:</strong> 499MB<br>
+            <strong>Versão:</strong> online-fix (serve para jogar multiplayer)<br>
+            <strong>Estado do produto:</strong> Atualizado!<br>
+            <strong>Créditos:</strong> SubGames
+        </p>
+        <a href="uploads/Lethal Company (1).zip" class="download-btn" download>Baixar Lethal Company</a>
+    </div>
+
+
+    <div class="game-item" data-title="Barotrauma">
+        <img src="img/bara.jpeg" alt="Barotrauma">
+        <h3>Barotrauma</h3>
+        <p>Barotrauma é um jogo de sobrevivência e exploração ambientado no fundo do oceano, onde os jogadores assumem o papel de tripulantes a bordo de um submarino.<br><br>
+            <strong>Peso:</strong> 1,3GB<br>
+            <strong>Versão:</strong> online-fix (serve para jogar multiplayer)<br>
+            <strong>Estado do produto:</strong> Atualizado!<br>
+            <strong>Créditos:</strong> SubGames
+        </p>
+        <a href="uploads/Barotrauma.zip" class="download-btn" download>Baixar Barotrauma</a>
+    </div>
+
+
+   
+    <div class="game-item" data-title="Mad Games Tycoon">
+        <img src="imagens jogos catalogo/mad games.jpg" alt="Mad Games Tycoon">
+        <h3>Mad Games Tycoon</h3>
+        <p>Comece o seu próprio estúdio de desenvolvimento de jogos em 1976. Construa seus próprios escritórios, instalações de produção e salas de servidores. Desenvolva os jogos dos seus sonhos e produza a próxima consola da próxima geração. Passe de uma pequena empresa de garagem para uma grande corporação.<br><br>
+            <strong>Peso:</strong> 1.2GB<br>
+            <strong>Versão:</strong> Rutracker (Jogo single player)<br>
+            <strong>Estado do produto:</strong> Atualizado!<br>
+            <strong>Créditos:</strong> SubGames
+        </p>
+        <a href="uploads/Mad Games Tycoon 2.zip" class="download-btn" download>Baixar Mad Games Tycoon</a>
+    </div>
+
+   
+    <div class="game-item" data-title="Laptop Tycoon">
+        <img src="imagens jogos catalogo/laptop tycoon 2.jpg" alt="Laptop Tycoon">
+        <h3>Laptop Tycoon</h3>
+        <p>Laptop Tycoon é um jogo de simulação de negócios onde o jogador assume o papel de um empreendedor no setor de tecnologia, focando na criação e comercialização de laptops.<br><br>
+            <strong>Peso:</strong> 584MB<br>
+            <strong>Versão:</strong> Rutracker (Jogo single player)<br>
+            <strong>Estado do produto:</strong> Atualizado!<br>
+            <strong>Créditos:</strong> SubGames
+        </p>
+        <a href="uploads/Laptop Tycoon.zip" class="download-btn" download>Baixar Laptop Tycoon</a>
+    </div>
+
+    <div class="game-item" data-title="Hidden Deep">
+        <img src="imagens jogos catalogo/hidden g.jpg" alt="Laptop Tycoon">
+        <h3>Hidden Deep</h3>
+        <p>Hidden Deep é um jogo de aventura e horror psicológico ambientado no fundo do oceano, onde os jogadores exploram as profundezas de uma estação de pesquisa subaquática abandonada. O enredo segue uma equipe de resgate que é enviada para investigar o desaparecimento de uma expedição anterior, com o objetivo de descobrir o que aconteceu com seus membros e coletar informações vitais.<br><br>
+            <strong>Peso:</strong> 1.4GB<br>
+            <strong>Versão:</strong> Rutracker (Sem Multiplayer)<br>
+            <strong>Estado do produto:</strong> Atualizado!<br>
+            <strong>Créditos:</strong> SubGames
+        </p>
+        <a href="uploads/Hidden Deep v0.95.43.2.zip" class="download-btn" download>Baixar Hidden Deep</a>
+    </div>
+
+    <div class="game-item" data-title="World Box">
+        <img src="imagens jogos catalogo/world box.png" alt="Laptop Tycoon">
+        <h3>World Box</h3>
+        <p>WorldBox é um simulador de mundos sandbox, onde o jogador pode criar e destruir universos. Lançado inicialmente em 2019, o jogo oferece um grande grau de liberdade para os jogadores, permitindo que eles criem paisagens, populações, e até civilizações inteiras.<br><br>
+            <strong>Peso:</strong> 528MB<br>
+            <strong>Versão:</strong> Rutracker (Sem Multiplayer)<br>
+            <strong>Estado do produto:</strong> Atualizado!<br>
+            <strong>Créditos:</strong> SubGames
+        </p>
+        <a href="uploads/WorldBox_SubGames.zip" class="download-btn" download>Baixar World Box</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 SubGames. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function searchGames() {
+        const searchTerm = document.getElementById('search').value.toLowerCase();
+        const games = document.querySelectorAll('.game-item');
+
+        games.forEach(game => {
+            const title = game.dataset.title.toLowerCase();
+            game.style.display = title.includes(searchTerm) ? 'block' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>
